@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Panera Rosa · Cocina casera non stop</title>
+<meta name="description" content="La Panera Rosa: desayunos, brunch, almuerzos, meriendas y cenas caseras, todo el día. Carta, sucursales, eventos y franquicias.">
+<meta name="theme-color" content="#f0899e">
+<meta property="og:title" content="La Panera Rosa · Cocina casera non stop">
+<meta property="og:description" content="La vida es más rica con una pizca de rosa.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=4">
+</head>
+<body>
+
+<a class="skip" href="#carta">Saltar a la carta</a>
+
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav__logo" aria-label="La Panera Rosa, inicio"><img src="img/logo-frambuesa.png" alt="La Panera Rosa" width="72" height="72"></a>
+  <nav class="nav__links" id="menu" aria-label="Principal">
+    <a href="#carta">La carta</a>
+    <a href="#historia">Nuestra historia</a>
+    <a href="#galeria">Galería</a>
+    <a href="#mapa">Sucursales</a>
+    <a href="#eventos">Eventos y cumples</a>
+    <a href="#franquicias">Franquicias</a>
+    <a href="#sucursales" class="btn btn--solid nav__cta">Reservá tu mesa</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero__circle" aria-hidden="true"></div>
+  <div class="hero__text">
+    <p class="script hero__kicker">Cocina casera</p>
+    <h1 class="hero__title">NON STOP</h1>
+    <p class="hero__lead">Desayunos, brunch, almuerzos, meriendas y cenas con recetas de la abuela. En Argentina, España, Chile, Uruguay y Paraguay, siempre en un plato rosa.</p>
+    <div class="hero__ctas">
+      <a href="#carta" class="btn btn--solid btn--lg">Ver la carta</a>
+      <a href="#mapa" class="btn btn--line btn--lg">Buscar mi sucursal</a>
+    </div>
+  </div>
+  <div class="hero__deck-wrap">
+    <div class="deck" id="deck" aria-roledescription="carrusel" aria-label="Fotos de platos">
+      <figure class="deck__card marco" data-cat="Desayunos & Meriendas"><img src="img/frenchtoast.webp" alt="French toast con frutos rojos en plato de lunares rosa" width="1000" height="1250"></figure>
+      <figure class="deck__card marco" data-cat="Waffles & Patisserie"><img src="img/waffle-roll.webp" alt="Waffle con frutillas, roll de canela y café" width="640" height="853" loading="lazy"></figure>
+      <figure class="deck__card marco" data-cat="Milanesas"><img src="img/milanesa-arriba.webp" alt="Milanesa con boniatos y huevo poché" width="1000" height="1250" loading="lazy"></figure>
+      <figure class="deck__card marco" data-cat="Pastas Caseras"><img src="img/raviolones-fingers.webp" alt="Raviolones caseros y pollo crocante con papas" width="1000" height="1250" loading="lazy"></figure>
+      <figure class="deck__card marco" data-cat="Para compartir"><img src="img/para-compartir.webp" alt="Mesa con varios platos para compartir" width="938" height="1250" loading="lazy"></figure>
+      <figure class="deck__card marco" data-cat="Tortas"><img src="img/redvelvet-torta.webp" alt="Torta red velvet entera y una porción" width="1000" height="1227" loading="lazy"></figure>
+    </div>
+    <div class="deck__ctrl">
+      <button class="round" id="prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="deck__label" aria-live="polite"><span class="deck__num" id="deckNum">01 / 06 · PASÁ LA FOTO</span><span class="deck__cat" id="deckCat">Desayunos &amp; Meriendas</span></div>
+      <button class="round" id="next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <div class="ribbon" aria-hidden="true"><div class="ribbon__track"><span>DESAYUNOS ✿ BRUNCH ✿ ALMUERZOS ✿ MERIENDAS ✿ CENAS ✿ PICOTEO ✿ TORTAS ✿ SIN GLUTEN ✿ KETO ✿&nbsp;</span><span>DESAYUNOS ✿ BRUNCH ✿ ALMUERZOS ✿ MERIENDAS ✿ CENAS ✿ PICOTEO ✿ TORTAS ✿ SIN GLUTEN ✿ KETO ✿&nbsp;</span></div></div>
+</section>
+
+<!-- HISTORIA -->
+<section class="historia" id="historia">
+  <div class="wrap historia__grid">
+    <div class="historia__fotos reveal">
+      <figure class="polaroid polaroid--a"><img src="img/salon-1.webp" alt="Salón de La Panera Rosa con sillones rosas y lámparas de mimbre" loading="lazy"></figure>
+      <figure class="polaroid polaroid--b"><img src="img/caja-medialunas.webp" alt="Caja rosa con medialunas caseras" loading="lazy"></figure>
+      <figure class="polaroid polaroid--c"><img src="img/bolsa.webp" alt="Bolsa rosa de La Panera Rosa" loading="lazy"></figure>
+    </div>
+    <div class="historia__texto reveal">
+      <p class="script">Nuestra historia</p>
+      <h2 class="h2">Recetas de mamá y la abuela, <em>con una pizca de rosa</em></h2>
+      <p>Cada plato es una combinación de vivencias y experiencias culinarias de nuestro fundador, que creció entre los aromas y sabores de la cocina de su madre y su abuela: dos mujeres que sabían transformar ingredientes simples en experiencias memorables.</p>
+      <p>Algunas de esas recetas las disfrutaba mientras veía sus dibujos animados favoritos, como <strong>La Pantera Rosa</strong>. Con el tiempo sumó viajes culinarios por el mundo y la propuesta creció a brunch, almuerzos, cenas y picoteos.</p>
+      <p>Reversionamos esas recetas familiares sin perder su autenticidad, en un espacio donde el confort y la calidez son protagonistas.</p>
+      <div class="puntilla historia__quote">Vos, sos<br>La Panera Rosa.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section class="carta" id="carta">
+  <div class="feston feston--top" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="carta__head">
+      <div>
+        <p class="script script--white">la vida es más rica…</p>
+        <h2 class="carta__title">LA CARTA</h2>
+      </div>
+      <div class="carta__tools">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span class="sr">Buscar en la carta</span>
+          <input type="search" id="cartaSearch" placeholder="¿Qué tenés ganas de comer?" autocomplete="off">
+        </label>
+        <a href="carta-la-panera-rosa.pdf" class="btn btn--white" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Carta en PDF</a>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Secciones de la carta" id="tabs"></div>
+    <div class="leyenda"><span class="tag tag--new">NEW</span> nuevo <span class="tag tag--low">LOW CARB</span> bajo en carbohidratos <span class="tag tag--sg">SIN GLUTEN</span> libre de gluten</div>
+    <div class="carta__body" id="cartaBody" aria-live="polite"></div>
+  </div>
+  <div class="feston feston--bottom" aria-hidden="true"></div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria" id="galeria">
+  <div class="wrap">
+    <p class="script">Rosa por donde mires</p>
+    <h2 class="h2">Así se vive en Panera</h2>
+  </div>
+  <div class="galeria__row" id="galeriaRow" tabindex="0" aria-label="Galería de fotos, deslizá para ver más">
+    <figure class="gal gal--tall marco"><img src="img/salon-3.webp" alt="Salón con sillones rosas y mesas de madera" loading="lazy"></figure>
+    <figure class="gal marco"><img src="img/brunch-mesa.webp" alt="Brunch con waffle salado y bife" loading="lazy"></figure>
+    <figure class="gal gal--tall marco"><img src="img/fitito.webp" alt="Fitito rosa con dos milkshakes" loading="lazy"></figure>
+    <figure class="gal marco"><img src="img/pastas.webp" alt="Raviolones en crema con vino blanco" loading="lazy"></figure>
+    <figure class="gal gal--tall marco"><img src="img/salon-2.webp" alt="Salón de ladrillo con ventanal" loading="lazy"></figure>
+    <figure class="gal marco"><img src="img/redvelvet-porcion.webp" alt="Porción de red velvet" loading="lazy"></figure>
+    <figure class="gal gal--tall marco"><img src="img/salon-4.webp" alt="Salón con vitrales de colores" loading="lazy"></figure>
+    <figure class="gal marco"><img src="img/torta-cafe.webp" alt="Café y torta de chocolate" loading="lazy"></figure>
+    <figure class="gal gal--tall marco"><img src="img/sandwich-mesa.webp" alt="Sándwich de bondiola con licuado" loading="lazy"></figure>
+  </div>
+  <div class="galeria__ctrl wrap">
+    <button class="round" data-dir="-1" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="round" data-dir="1" aria-label="Más fotos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    <a class="galeria__ig" href="https://www.instagram.com/la.panera.rosa/" target="_blank" rel="noopener">Más en @la.panera.rosa</a>
+  </div>
+</section>
+
+<!-- NEÓN -->
+<section class="luz" id="luz">
+  <div class="wrap luz__grid">
+    <div class="neon" id="neon" aria-label="La Panera Rosa">
+      <span class="neon__la tubo t1">La</span>
+      <span class="neon__panera tubo t2">PANERA</span>
+      <span class="neon__line tubo t3"></span>
+      <span class="neon__rosa tubo t3">ROSA</span>
+      <span class="neon__line tubo t3"></span>
+    </div>
+    <div class="luz__texto">
+      <p class="script script--neon">de la mañana a la noche</p>
+      <h2 class="luz__title">LA LUZ SIEMPRE ESTÁ PRENDIDA</h2>
+      <p>Un brunch a media mañana, el almuerzo, la merienda de siempre o una copa a la noche. Entrá cuando quieras: somos cocina casera non stop.</p>
+      <button class="switch" id="switch" aria-pressed="true"><span class="switch__dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.8 0"/></svg></span><span id="switchTxt">Apagá la luz</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="mapa" id="mapa">
+  <div class="wrap">
+    <div class="mapa__head">
+      <div class="mapa__texto">
+        <p class="script">¿Dónde nos encontrás?</p>
+        <h2 class="h2">Un mapa bien rosa</h2>
+        <p class="muted">De Corrientes al Río de la Plata. Tocá un pin para ver la dirección y reservar por WhatsApp.</p>
+      </div>
+      <dl class="mapa__stats">
+        <div><dt data-count="20" id="statTotal">20</dt><dd>sucursales en Argentina</dd></div>
+        <div><dt data-count="18" id="statAmba">18</dt><dd>en CABA y GBA</dd></div>
+        <div><dt data-count="5">5</dt><dd>países · también España, Chile, Uruguay y Paraguay</dd></div>
+      </dl>
+    </div>
+    <div class="mapa__duo" id="mapaWrap">
+      <figure class="mapa__panel mapa__panel--arg">
+        <figcaption class="mapa__cap">Argentina</figcaption>
+        <svg class="mapa__svg" id="mapaArg" viewBox="0 0 840 900" role="img" aria-label="Mapa del norte y centro de Argentina con las sucursales de Corrientes, Rosario y Buenos Aires"></svg>
+      </figure>
+      <figure class="mapa__panel mapa__panel--amba">
+        <figcaption class="mapa__cap">Zoom · CABA y GBA</figcaption>
+        <svg class="mapa__svg" id="mapaAmba" viewBox="0 0 800 1064" role="img" aria-label="Mapa de la Ciudad de Buenos Aires y el Gran Buenos Aires con 18 sucursales"></svg>
+      </figure>
+      <div class="mapa__card" id="mapaCard" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCURSALES -->
+<section class="sucursales" id="sucursales">
+  <div class="wrap">
+    <div class="suc__head">
+      <div>
+        <h2 class="h2 h2--sm">Todas las sucursales</h2>
+        <p class="muted">Reservá escribiendo por WhatsApp a tu sucursal.</p>
+      </div>
+      <div class="suc__tools">
+        <label class="search search--light">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span class="sr">Buscar sucursal</span>
+          <input type="search" id="sucSearch" placeholder="Buscá por barrio o calle" autocomplete="off">
+        </label>
+        <div class="chips" id="zonas" role="group" aria-label="Filtrar por zona">
+          <button class="chip is-on" data-zona="Todas" aria-pressed="true">Todas</button>
+          <button class="chip" data-zona="CABA" aria-pressed="false">CABA</button>
+          <button class="chip" data-zona="GBA" aria-pressed="false">GBA</button>
+          <button class="chip" data-zona="Interior" aria-pressed="false">Interior</button>
+        </div>
+      </div>
+    </div>
+    <div class="suc__grid" id="sucGrid"></div>
+    <p class="suc__empty" id="sucEmpty" hidden>No encontramos esa sucursal. Probá con otro barrio.</p>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="eventos" id="eventos">
+  <div class="wrap eventos__grid">
+    <div class="eventos__texto reveal">
+      <p class="script">Cumples, talleres y celebraciones</p>
+      <h2 class="h2">Festejá en rosa</h2>
+      <p>Cumpleaños, aniversarios, encuentros con amigas o un taller para que los más chicos decoren sus propias cookies. Armamos la mesa, vos traés las ganas.</p>
+      <ul class="lista">
+        <li>Eventos sociales y cumpleaños</li>
+        <li>Talleres para chicos</li>
+        <li>Tortas enteras para llevar</li>
+      </ul>
+      <a href="#sucursales" class="btn btn--solid btn--lg">Consultá en tu sucursal</a>
+    </div>
+    <div class="eventos__fotos reveal">
+      <figure class="polaroid polaroid--d"><img src="img/taller-2.webp" alt="Mamá e hijo con licuado y tortas" loading="lazy"><figcaption>merienda de cumple</figcaption></figure>
+      <figure class="polaroid polaroid--e"><img src="img/taller-1.webp" alt="Chico decorando una torta con glasé rosa" loading="lazy"><figcaption>manos a la masa</figcaption></figure>
+      <figure class="polaroid polaroid--f"><img src="img/taller-3.webp" alt="Cookie decorada con confites de colores" loading="lazy"><figcaption>¡mi propia cookie!</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FRANQUICIAS -->
+<section class="franquicias" id="franquicias">
+  <div class="wrap franq__grid">
+    <img class="franq__logo" src="img/logo-blanco.png" alt="" width="260" height="260" loading="lazy">
+    <div>
+      <p class="script script--white">¿Te imaginás una en tu ciudad?</p>
+      <h2 class="franq__title">QUIERO TENER MI PANERA ROSA</h2>
+      <p class="franq__paises">Argentina · España · Chile · Uruguay · Paraguay</p>
+      <a class="btn btn--white btn--lg" href="mailto:franquicias@lapanerarosa.com.ar?subject=Quiero%20tener%20mi%20Panera%20Rosa">franquicias@lapanerarosa.com.ar</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img src="img/logo-circulo.png" alt="La Panera Rosa · Cocina casera non stop" width="120" height="120" loading="lazy">
+    <div>
+      <p class="script script--footer">La vida es más rica con una pizca de rosa</p>
+      <nav class="footer__links" aria-label="Pie de página">
+        <a href="#carta">Carta</a><a href="#sucursales">Sucursales</a><a href="#eventos">Eventos</a><a href="#franquicias">Franquicias</a><a href="mailto:[EMAIL-TRABAJA-CON-NOSOTROS]">Trabajá con nosotros</a>
+      </nav>
+    </div>
+    <a class="footer__ig" href="https://www.instagram.com/la.panera.rosa/" target="_blank" rel="noopener" aria-label="Instagram @la.panera.rosa">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@la.panera.rosa
+    </a>
+  </div>
+  <p class="footer__legal wrap">© La Panera Rosa · Cocina casera non stop</p>
+  <p class="credito wrap">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<script src="js/data.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
