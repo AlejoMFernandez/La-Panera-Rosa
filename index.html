@@ -13,9 +13,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Sacramento&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=4">
+<link rel="stylesheet" href="css/styles.css?v=5">
+<script>try{if(!sessionStorage.getItem('lprIntro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-on')}catch(e){}</script>
 </head>
 <body>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__velo"></div>
+  <div class="intro__dots" id="introDots"></div>
+  <img class="intro__sello" src="img/logo-blanco.png" alt="" width="260" height="260">
+  <span class="intro__skip">tocá para saltar</span>
+</div>
 
 <a class="skip" href="#carta">Saltar a la carta</a>
 
@@ -39,15 +47,15 @@
 <section class="hero" id="inicio">
   <div class="hero__circle" aria-hidden="true"></div>
   <div class="hero__text">
-    <p class="script hero__kicker">Cocina casera</p>
-    <h1 class="hero__title">NON STOP</h1>
-    <p class="hero__lead">Desayunos, brunch, almuerzos, meriendas y cenas con recetas de la abuela. En Argentina, España, Chile, Uruguay y Paraguay, siempre en un plato rosa.</p>
-    <div class="hero__ctas">
+    <p class="script hero__kicker ent">Cocina casera</p>
+    <h1 class="hero__title ent">NON STOP</h1>
+    <p class="hero__lead ent">Desayunos, brunch, almuerzos, meriendas y cenas con recetas de la abuela. En Argentina, España, Chile, Uruguay y Paraguay, siempre en un plato rosa.</p>
+    <div class="hero__ctas ent">
       <a href="#carta" class="btn btn--solid btn--lg">Ver la carta</a>
       <a href="#mapa" class="btn btn--line btn--lg">Buscar mi sucursal</a>
     </div>
   </div>
-  <div class="hero__deck-wrap">
+  <div class="hero__deck-wrap ent">
     <div class="deck" id="deck" aria-roledescription="carrusel" aria-label="Fotos de platos">
       <figure class="deck__card marco" data-cat="Desayunos & Meriendas"><img src="img/frenchtoast.webp" alt="French toast con frutos rojos en plato de lunares rosa" width="1000" height="1250"></figure>
       <figure class="deck__card marco" data-cat="Waffles & Patisserie"><img src="img/waffle-roll.webp" alt="Waffle con frutillas, roll de canela y café" width="640" height="853" loading="lazy"></figure>
@@ -263,6 +271,6 @@
 </footer>
 
 <script src="js/data.js?v=3"></script>
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>

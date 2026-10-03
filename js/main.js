@@ -4,6 +4,31 @@
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+
+  /* ---------- INTRO: lluvia de lunares ---------- */
+  (function intro() {
+    const root = document.documentElement, el = $('#intro');
+    if (!el || !root.classList.contains('intro-on')) { if (el) el.remove(); return; }
+    try { sessionStorage.setItem('lprIntro', '1'); } catch (e) {}
+    const W = window.innerWidth, H = window.innerHeight, c = Math.max(60, Math.min(92, W / 14));
+    const cols = Math.ceil(W / c) + 1, rows = Math.ceil(H / c) + 1, ox = (W - cols * c) / 2, oy = (H - rows * c) / 2;
+    let html = '', maxD = 0;
+    for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) {
+      const x = ox + k * c, y = oy + r * c, d = Math.hypot(x + c / 2 - W / 2, y + c / 2 - H / 2) / c * 0.05;
+      maxD = Math.max(maxD, d);
+      html += `<span style="left:${x.toFixed(0)}px;top:${y.toFixed(0)}px;width:${c.toFixed(0)}px;height:${c.toFixed(0)}px;animation-delay:${d.toFixed(3)}s"></span>`;
+    }
+    $('#introDots').innerHTML = html;
+    let done = false;
+    const play = () => root.classList.add('intro-play');
+    const fin = () => { if (done) return; done = true; play(); el.classList.add('is-out'); root.classList.remove('intro-on'); setTimeout(() => el.remove(), 400); };
+    const tPlay = setTimeout(play, 1950), tFin = setTimeout(fin, (2.6 + Math.min(maxD, .6)) * 1000);
+    const saltar = () => { clearTimeout(tPlay); clearTimeout(tFin); fin(); };
+    el.addEventListener('click', saltar);
+    el.addEventListener('touchstart', saltar, { passive: true });
+    window.addEventListener('keydown', saltar, { once: true });
+  })();
+
   /* ---------- NAV ---------- */
   const nav = $('#nav'), burger = $('#burger');
   const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 30);
@@ -51,7 +76,7 @@
     if (Math.abs(dx) > 40) { hold = true; go(dx < 0 ? 1 : -1); e.preventDefault(); }
   });
   paint();
-  if (!reduce) timer = setInterval(() => { if (!hold && !document.hidden) go(1); }, 4200);
+  if (!reduce) timer = setInterval(() => { if (!hold && !document.hidden && !document.getElementById('intro')) go(1); }, 4200);
   window.addEventListener('resize', paint);
 
   /* ---------- CARTA ---------- */
